@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tata Projects Limited | ACER Press Release</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #54B69C;
+            --primary-dark: #3d9a7f;
+            --primary-light: #6fc4ac;
+            --text-dark: #1a1a1a;
+            --text-gray: #4a4a4a;
+            --text-light: #666666;
+            --bg-light: #f8fbfa;
+            --bg-white: #ffffff;
+            --border-color: #e0e0e0;
+            --border-dark: #d0d0d0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #f5f7f9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-white);
+            padding: 60px 50px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        /* HEADER SECTION */
+        .header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .header-date {
+            font-size: 1rem;
+            color: var(--text-gray);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .header-subtitle {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.4;
+        }
+
+        .logo-section {
+            text-align: center;
+        }
+
+        .logo-section img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* RATING BADGE */
+        .rating-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 12px;
+            box-shadow: 0 4px 12px rgba(84, 182, 156, 0.2);
+        }
+
+        /* SECTION TITLES */
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-top: 50px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-light);
+            position: relative;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 2px;
+            width: 60px;
+            background-color: var(--primary-color);
+            border-radius: 1px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+
+        /* TABLES */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--bg-white);
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: white;
+        }
+
+        th {
+            padding: 16px 12px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        td {
+            padding: 14px 12px;
+            border: 1px solid var(--border-color);
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: var(--bg-light);
+        }
+
+        tbody tr:hover {
+            background-color: rgba(84, 182, 156, 0.05);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        /* PARAGRAPHS & TEXT */
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-gray);
+            margin-bottom: 16px;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* LISTS */
+        ul {
+            margin-left: 24px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        .list-inline {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .list-inline li {
+            margin-bottom: 8px;
+        }
+
+        /* STRENGTHS & WEAKNESSES */
+        .strength-weakness-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .strength-item, .weakness-item {
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid;
+            background-color: var(--bg-light);
+        }
+
+        .strength-item {
+            border-left-color: var(--primary-color);
+        }
+
+        .weakness-item {
+            border-left-color: #d4b373;
+        }
+
+        .strength-item h4, .weakness-item h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .strength-item p, .weakness-item p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-gray);
+            margin: 0;
+        }
+
+        /* SENSITIVITIES */
+        .sensitivities-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .sensitivity-box {
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--bg-light);
+        }
+
+        .sensitivity-box h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        .sensitivity-box ul {
+            margin-left: 20px;
+        }
+
+        .sensitivity-box li {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+        }
+
+        /* ANNEXURES */
+        .annexures-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .annexures-section h2 {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .annexure-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-top: 35px;
+            margin-bottom: 18px;
+        }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .contact-section h3 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+        }
+
+        .contact-item {
+            margin-bottom: 25px;
+            padding: 18px;
+            background-color: white;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-name {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .contact-role {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .contact-detail {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 6px;
+        }
+
+        .contact-detail strong {
+            color: var(--text-dark);
+            min-width: 100px;
+            display: inline-block;
+        }
+
+        .contact-email a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-email a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* DISCLAIMER */
+        .disclaimer {
+            margin-top: 50px;
+            padding: 25px;
+            background-color: #fafafa;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .disclaimer h3 {
+            margin-top: 0;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
+        .disclaimer h3:first-child {
+            margin-top: 0;
+        }
+
+        .disclaimer p {
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+            }
+
+            .header {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .strength-weakness-grid,
+            .sensitivities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 10px 8px;
+            }
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-content">
+                <h1>Tata Projects Limited</h1>
+                <div class="header-date">Mumbai, March 02, 2026</div>
+                <div class="header-subtitle">"ACER AA / Stable" assigned to Non Convertible Debentures of Tata Projects Limited</div>
+                <div class="rating-badge">ACER AA / Stable</div>
+            </div>
+            <div class="logo-section">
+                <img src="./assets/logo.svg" alt="ACER Ratings Logo">
+            </div>
+        </div>
+
+        <!-- RATING ACTION TABLE -->
+        <h2>Rating Action</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Instrument / Facility</th>
+                        <th class="text-center">Amount (INR Crore)</th>
+                        <th class="text-center">Current Ratings</th>
+                        <th class="text-center">Rating Action</th>
+                        <th class="text-center">Regulator</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rs.500 Crore Non Convertible Debentures</td>
+                        <td class="text-center">500.00</td>
+                        <td class="text-center font-bold">ACER AA/Stable</td>
+                        <td class="text-center">Assigned</td>
+                        <td class="text-center">SEBI</td>
+                    </tr>
+                    <tr>
+                        <td>Rs.1500 Crore Bank Facilities</td>
+                        <td class="text-center">1500.00</td>
+                        <td class="text-center font-bold">ACER AA/Stable</td>
+                        <td class="text-center">Reaffirmed</td>
+                        <td class="text-center">RBI</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="margin-bottom: 30px; font-size: 0.9rem; color: var(--text-light);">
+            <p><strong>Details of Instruments:</strong> Details of Facilities/Instruments are in Annexure 2</p>
+            <p><strong>Facility-wise lender details:</strong> Facility-wise lender details are at Annexure 3</p>
+            <p><strong>Regulators:</strong> List of facilities corresponding to respective financial sector regulator are in Annexure 5</p>
+            <p style="margin-top: 12px;"><strong>Unsupported rating:</strong> ACER A+</p>
+        </div>
+
+        <!-- ANALYTICAL APPROACH -->
+        <h2>Analytical Approach</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Parameter</th>
+                        <th style="width: 50%;">Approach</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Results considered</strong></td>
+                        <td>Standalone or consolidated</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Extent of consolidation</strong></td>
+                        <td>Partial consolidation / Full consolidation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ACER rating for group companies</strong></td>
+                        <td>Do not mention rating of group companies from other CRAs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Group/Parent/Government support</strong></td>
+                        <td>Bottom-up or Top-down approach</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Other considerations</strong></td>
+                        <td>As applicable</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- BRIEF SUMMARY -->
+        <h2>Brief Summary</h2>
+        <p>The rating assignment reflects TPL's strong parentage (Tata Group) and its established position in the domestic EPC market. TPL continues to maintain a healthy and diversified order book. The rating also factors in TPL's adequate liquidity profile, supported by stable working capital management and financial flexibility associated with the Tata Group.</p>
+        <p>These strengths are partially offset by the inherently working capital-intensive nature of the EPC business, exposure to project execution risks, and susceptibility to volatility in raw material prices. The moderate financial risk profile, characterized by moderately high leverage, remains a constraint.</p>
+        <ul>
+            <li>Business profile and any changes</li>
+            <li>Favorable/unfavorable changes in revenue mix, credit metrics</li>
+            <li>Support from the parent/group and past track record</li>
+            <li>Movement of the critical and measurable parameters in the past and expected performance in the future</li>
+            <li>Other points relevant to the case</li>
+        </ul>
+
+        <!-- STRENGTHS & WEAKNESSES -->
+        <h2>Key Rating Drivers</h2>
+        
+        <h3>Strengths</h3>
+        <div class="strength-weakness-grid">
+            <div class="strength-item">
+                <h4>Robust Order Book Providing Revenue Visibility</h4>
+                <p>As of December 2025, TPL has an unexecuted order book of around INR 45,000 crores, translating to an order book to revenue ratio of over 3x, providing strong medium-term revenue visibility. The order book is well-diversified across sectors including transportation, urban infrastructure, industrial, and power.</p>
+            </div>
+            <div class="strength-item">
+                <h4>Established Track Record in Project Execution</h4>
+                <p>TPL has successfully completed several marquee infrastructure projects in India, demonstrating strong execution capabilities. The company's focus on selecting technologically intensive and high-margin projects mitigates competition to an extent.</p>
+            </div>
+            <div class="strength-item">
+                <h4>Strong Parentage & Financial Flexibility</h4>
+                <p>Association with the Tata Group provides strong financial backing, brand credibility, and operational synergies. This supports the company's ability to access capital markets and maintain financial flexibility.</p>
+            </div>
+            <div class="strength-item">
+                <h4>Diversified Project Portfolio</h4>
+                <p>Revenue streams span multiple sectors and geographies, reducing concentration risk and providing resilience through economic cycles.</p>
+            </div>
+        </div>
+
+        <h3>Weaknesses</h3>
+        <div class="strength-weakness-grid">
+            <div class="weakness-item">
+                <h4>Moderate Financial Risk Profile</h4>
+                <p>Given the significant scaling up of operations, reliance on external debt and non-fund based limits has increased. The capital structure is leveraged with Total Outside Liabilities to Tangible Net Worth estimated to remain moderately high.</p>
+            </div>
+            <div class="weakness-item">
+                <h4>Working Capital Intensive Operations</h4>
+                <p>The EPC business involves substantial working capital requirements due to milestone-based billing, holdbacks, and retention money. However, TPL's working capital cycle is expected to remain managed through back-to-back arrangements.</p>
+            </div>
+            <div class="weakness-item">
+                <h4>Project Execution Risks</h4>
+                <p>Operations are exposed to typical project execution risks, including delays in land acquisition, regulatory clearances, and funding from clients. While mostly protected by price escalation clauses, some fixed-price contracts remain exposed to raw material price volatility.</p>
+            </div>
+            <div class="weakness-item">
+                <h4>Raw Material Price Volatility</h4>
+                <p>Susceptibility to commodity price fluctuations and foreign exchange risks in international projects. This requires proactive hedging and pass-through mechanisms.</p>
+            </div>
+        </div>
+
+        <!-- LIQUIDITY INDICATOR -->
+        <h2>Liquidity Indicator</h2>
+        <p><strong style="color: var(--primary-color); font-size: 1.1rem;">Adequate</strong></p>
+        <p>TPL's liquidity is considered adequate, supported by healthy cash flow from operations, unencumbered cash and bank balances of ~INR 1,200 crore as of December 2025, and high financial flexibility due to its parentage. The average utilization of working capital limits over the last 12 months has been around 75%, providing sufficient headroom.</p>
+
+        <!-- RATING SENSITIVITIES -->
+        <h2>Rating Sensitivities</h2>
+        <div class="sensitivities-grid">
+            <div class="sensitivity-box">
+                <h4>Positive Sensitivities</h4>
+                <ul>
+                    <li>Significant improvement in profitability margins on a sustained basis</li>
+                    <li>Substantial reduction in debt levels leading to improvement in debt coverage indicators</li>
+                    <li>Improvement in the working capital cycle reducing reliance on external debt</li>
+                </ul>
+            </div>
+            <div class="sensitivity-box">
+                <h4>Negative Sensitivities</h4>
+                <ul>
+                    <li>Significant delays in project execution impacting revenue booking and profitability</li>
+                    <li>Deterioration in working capital management leading to stretched cash flows</li>
+                    <li>Large debt-funded capex or investments negatively impacting the financial risk profile</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ABOUT COMPANY -->
+        <h2>About the Company</h2>
+        <p>Tata Projects Limited (TPL) is one of the fastest growing and most admired infrastructure companies in India. It has expertise in executing large and complex urban and industrial infrastructure projects. TPL operates through its strategically aligned business units: Urban Infrastructure, Core Infra, and Industrial Systems.</p>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Business Unit</th>
+                        <th>Sectors</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Urban Infrastructure</strong></td>
+                        <td>Metro rails, airports, smart cities, and public spaces</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Core Infra</strong></td>
+                        <td>Power generation, transmission and distribution, roads, and bridges</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Industrial Systems</strong></td>
+                        <td>Hydrocarbon, chemical, and metal plant constructions</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- FINANCIAL INDICATORS -->
+        <h2>Financial Indicators (Standalone)</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Particulars</th>
+                        <th class="text-right">FY2023 (Audited)</th>
+                        <th class="text-right">FY2024 (Audited)</th>
+                        <th class="text-right">FY2025 (Projected)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Operating Revenue (Rs. Crore)</strong></td>
+                        <td class="text-right">10,200.50</td>
+                        <td class="text-right">13,500.00</td>
+                        <td class="text-right">17,000.00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EBITDA (Rs. Crore)</strong></td>
+                        <td class="text-right">850.25</td>
+                        <td class="text-right">1,200.00</td>
+                        <td class="text-right">1,650.00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EBITDA Margin (%)</strong></td>
+                        <td class="text-right">8.33%</td>
+                        <td class="text-right">8.88%</td>
+                        <td class="text-right">9.70%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interest Coverage (x)</strong></td>
+                        <td class="text-right">2.50x</td>
+                        <td class="text-right">3.10x</td>
+                        <td class="text-right">3.50x</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Net Leverage (x)</strong></td>
+                        <td class="text-right">3.80x</td>
+                        <td class="text-right">3.10x</td>
+                        <td class="text-right">2.80x</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PAT Margin (%)</strong></td>
+                        <td class="text-right">3.10%</td>
+                        <td class="text-right">3.75%</td>
+                        <td class="text-right">4.20%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="note">Source: Issuer Data, ACER Ratings Analysis</p>
+
+        <!-- ANNEXURES SECTION -->
+        <div class="annexures-section">
+            <h2>Annexures</h2>
+
+            <!-- ANNEXURE 1: Rating History -->
+            <div class="annexure-title">Annexure 1: Rating History for the Last Three Years</div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Instrument Type</th>
+                            <th>Rating Type</th>
+                            <th class="text-right">Rated Limits (INR Crore)</th>
+                            <th class="text-center">Current Rating</th>
+                            <th class="text-center">17-Mar-26</th>
+                            <th class="text-center">12-Mar-26</th>
+                            <th class="text-center">30-Mar-26</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Non Convertible Debentures</td>
+                            <td>Long-term</td>
+                            <td class="text-right">500</td>
+                            <td class="text-center font-bold">AA/Stable</td>
+                            <td class="text-center">AA/Stable</td>
+                            <td class="text-center">AA/Stable</td>
+                            <td class="text-center">AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td>Bank Facilities</td>
+                            <td>Long-term</td>
+                            <td class="text-right">1500</td>
+                            <td class="text-center font-bold">AA/Stable</td>
+                            <td class="text-center">AA/Stable</td>
+                            <td class="text-center">AA/Stable</td>
+                            <td class="text-center">AA/Stable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ANNEXURE 1.1: Complexity Level -->
+            <div class="annexure-title">Annexure 1.1: Complexity Level of Rated Instruments</div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Instrument</th>
+                            <th>Complexity Indicator</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Non Convertible Debentures</td>
+                            <td>Simple</td>
+                        </tr>
+                        <tr>
+                            <td>Bank Facilities</td>
+                            <td>Simple</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="note">ACER has classified instruments rated by it based on complexity. For more details, visit www.acerratings.com</p>
+
+            <!-- ANNEXURE 2: Instrument Details -->
+            <div class="annexure-title">Annexure 2: Instrument / Facility Details</div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Facility Name</th>
+                            <th>ISIN</th>
+                            <th class="text-center">Issuance Date</th>
+                            <th class="text-center">Coupon Rate</th>
+                            <th class="text-center">Maturity Date</th>
+                            <th class="text-right">Size (Rs. Crore)</th>
+                            <th class="text-center">Listing Status</th>
+                            <th class="text-center">Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>NCD Issue I</strong></td>
+                            <td>INE234A07111</td>
+                            <td class="text-center">15-Jun-2025</td>
+                            <td class="text-center">8.50%</td>
+                            <td class="text-center">15-Jun-2030</td>
+                            <td class="text-right">250.00</td>
+                            <td class="text-center">Listed</td>
+                            <td class="text-center font-bold">AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td><strong>NCD Issue II</strong></td>
+                            <td>INE234A07129</td>
+                            <td class="text-center">20-Oct-2025</td>
+                            <td class="text-center">8.75%</td>
+                            <td class="text-center">20-Oct-2032</td>
+                            <td class="text-right">250.00</td>
+                            <td class="text-center">Listed</td>
+                            <td class="text-center font-bold">AA/Stable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ANNEXURE 3: Lender Details -->
+            <div class="annexure-title">Annexure 3: Facility-wise Lender Details</div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bank Name</th>
+                            <th>Facility Name</th>
+                            <th class="text-right">Amount (INR Crore)</th>
+                            <th class="text-center">Rating / Outlook</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>State Bank of India</strong></td>
+                            <td>Term Loan</td>
+                            <td class="text-right">400.00</td>
+                            <td class="text-center">AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Cash Credit</td>
+                            <td class="text-right">300.00</td>
+                            <td class="text-center">AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HDFC Bank</strong></td>
+                            <td>Term Loan</td>
+                            <td class="text-right">200.00</td>
+                            <td class="text-center">AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Cash Credit</td>
+                            <td class="text-right">250.00</td>
+                            <td class="text-center">AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Axis Bank</strong></td>
+                            <td>Term Loan</td>
+                            <td class="text-right">200.00</td>
+                            <td class="text-center">AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Cash Credit</td>
+                            <td class="text-right">150.00</td>
+                            <td class="text-center">AA/Stable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ANNEXURE 4: Covenants -->
+            <div class="annexure-title">Annexure 4: Detailed Explanation of Covenants</div>
+            <p>Standard financial covenants including maintaining DSCR above 1.2x and Net Debt/EBITDA below 3.5x. The company is required to maintain unencumbered cash balances of at least INR 200 crore and comply with debt service coverage ratios as specified in facility agreements.</p>
+
+            <!-- ANNEXURE 5: FSR List -->
+            <div class="annexure-title">Annexure 5: List of Activities under Financial Sector Regulators</div>
+            <p>Facilities are categorized under SEBI (NCDs) and RBI (Bank Facilities). For detailed list of activities and corresponding regulators, please refer to the regulatory classification provided in facility-wise documentation.</p>
+
+            <!-- ANNEXURE 6: Consolidated Entities -->
+            <div class="annexure-title">Annexure 6: List of Companies Considered for Consolidated Analysis</div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Entity Name</th>
+                            <th class="text-center">Extent of Consolidation</th>
+                            <th class="text-center">Rationale for Consolidation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Artesian Water Projects Limited</strong></td>
+                            <td class="text-center">Full</td>
+                            <td class="text-center">Wholly Owned Subsidiary</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tata Projects Infrastructure Limited</strong></td>
+                            <td class="text-center">Full</td>
+                            <td class="text-center">Significant control and operational holding</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ANALYTICAL CONTACTS -->
+        <div class="contact-section">
+            <h3>Analytical Contacts</h3>
+            
+            <div class="contact-item">
+                <div class="contact-role">Lead Analyst</div>
+                <div class="contact-name">Vikram Sharma</div>
+                <div class="contact-detail"><strong>Contact Number:</strong> +91-22-12345678</div>
+                <div class="contact-detail contact-email"><strong>Email:</strong> <a href="mailto:vikram.sharma@acerratings.com">vikram.sharma@acerratings.com</a></div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-role">Director - Ratings</div>
+                <div class="contact-name">Priya Nair</div>
+                <div class="contact-detail"><strong>Contact Number:</strong> +91-22-87654321</div>
+                <div class="contact-detail contact-email"><strong>Email:</strong> <a href="mailto:priya.nair@acerratings.com">priya.nair@acerratings.com</a></div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-role">Chief Rating Officer</div>
+                <div class="contact-name">Rahul Desai</div>
+                <div class="contact-detail"><strong>Contact Number:</strong> +91-22-99998888</div>
+                <div class="contact-detail contact-email"><strong>Email:</strong> <a href="mailto:rahul.desai@acerratings.com">rahul.desai@acerratings.com</a></div>
+            </div>
+        </div>
+
+        <!-- DISCLAIMER -->
+        <div class="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>ACER Credit Rating Private Limited (ACER) is engaged in the business of providing credit ratings and other permitted services and does not provide investment advice or recommendations, directly or indirectly, with respect to any securities. Ratings are subject to ongoing surveillance, revision or withdrawal, as and when warranted.</p>
+            
+            <p>Information used in assigning ratings has been obtained from sources believed to be reliable, including the rated entity; however, such information has not been independently audited or verified by ACER. While reasonable care has been exercised to ensure that the information contained herein is true and fair, it is provided "as is". ACER does not make any representation or warranty of any kind, or guarantee the accuracy, adequacy, suitability or completeness of any information or its fitness for a particular purpose.</p>
+            
+            <p>All ratings and related analyses are statements of opinion, and ACER shall not be liable for any losses, direct or indirect, arising from use of this publication or its contents. Users are advised to exercise their own judgment and due diligence before making any decision based on the ratings.</p>
+
+            <h3>About ACER</h3>
+            <p>ACER Credit Rating Private Limited is a SEBI-registered Credit Rating Agency providing comprehensive credit ratings for corporate and financial institutions. For more information and the definition of ratings, please visit <strong>www.acerratings.com</strong></p>
+        </div>
+    </div>
+</body>
+</html>

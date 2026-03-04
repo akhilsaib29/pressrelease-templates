@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACER Ratings - Press Release</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #54B69C;
+            --primary-dark: #3D9D80;
+            --primary-light: #7ECBAE;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a5568;
+            --bg-light: #f7f9fc;
+            --bg-lighter: #f0f4f8;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', sans-serif;
+            color: var(--text-primary);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header-top {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 3rem 2rem;
+            color: white;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .logo-box {
+            background: rgba(255,255,255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .logo-box h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-box p {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            margin-top: 0.25rem;
+        }
+
+        .header-title h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .header-title p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+
+        /* Rating Badge */
+        .rating-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 100px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+        }
+
+        .subsection-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Table Styles */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-light);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+        }
+
+        thead th {
+            padding: 1rem;
+            font-weight: 600;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        tbody td {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            background: white;
+        }
+
+        tbody tr:hover {
+            background-color: var(--bg-lighter);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: var(--bg-light);
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .font-medium {
+            font-weight: 500;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-highlight {
+            background: linear-gradient(135deg, rgba(84, 182, 156, 0.08) 0%, rgba(84, 182, 156, 0.02) 100%);
+            border-left: 4px solid var(--primary);
+        }
+
+        /* Strengths & Weaknesses Grid */
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .strength-item, .weakness-item {
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid;
+            background: var(--bg-light);
+        }
+
+        .strength-item {
+            border-left-color: #22c55e;
+            background: rgba(34, 197, 94, 0.05);
+        }
+
+        .weakness-item {
+            border-left-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .strength-item h4 {
+            color: #16a34a;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .weakness-item h4 {
+            color: #d97706;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .strength-item p, .weakness-item p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-name {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-detail {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-detail a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-detail a:hover {
+            text-decoration: underline;
+        }
+
+        /* Disclaimer */
+        .disclaimer-section {
+            background: var(--bg-lighter);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .disclaimer-section h3 {
+            color: var(--text-primary);
+            font-weight: 700;
+            margin-top: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .disclaimer-section p {
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .header-title h1 {
+                font-size: 2rem;
+            }
+
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .main-content {
+                padding: 2rem 1rem;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            thead th, tbody td {
+                padding: 0.6rem 0.8rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .header-top {
+                page-break-after: avoid;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+
+            .table-wrapper {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-top">
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Credit Rating Action</h1>
+                <p>Press Release for Tata Projects Limited</p>
+                <div class="rating-badge">ACER AA / Stable</div>
+            </div>
+            <div class="logo-box">
+                <h2>ACER</h2>
+                <p>Credit Rating</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Brief Summary Section -->
+        <section class="section">
+            <h2 class="section-title">Brief Summary</h2>
+            <div class="card card-highlight">
+                <p class="text-secondary">ACER has assigned its ratings to the debt instruments of Tata Projects Limited (TPL). The ratings take into account the company's strong market position, established track record in project execution, and stable financial profile. The stable outlook reflects our confidence in the company's ability to maintain its position and financial strength.</p>
+            </div>
+        </section>
+
+        <!-- Rationale Section -->
+        <section class="section">
+            <h2 class="section-title">Rating Rationale</h2>
+            <div class="card">
+                <h3 class="subsection-title">Reasons for Positive Outlook:</h3>
+                <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.75rem;">Strong market position in infrastructure and construction sector</li>
+                    <li style="margin-bottom: 0.75rem;">Consistent revenue growth and profitability metrics</li>
+                    <li style="margin-bottom: 0.75rem;">Diversified project portfolio across sectors</li>
+                    <li style="margin-bottom: 0.75rem;">Experienced management team with proven track record</li>
+                    <li style="margin-bottom: 0.75rem;">Strong banking relationships and credit facilities</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Strengths & Weaknesses Section -->
+        <section class="section">
+            <h2 class="section-title">Analytical Approach</h2>
+            
+            <div class="strengths-weaknesses">
+                <div>
+                    <h3 style="color: var(--primary); font-weight: 700; margin-bottom: 1.5rem; border-bottom: 2px solid #22c55e; padding-bottom: 0.75rem;">Key Strengths</h3>
+                    <div class="strength-item">
+                        <h4>✓ Market Leadership</h4>
+                        <p>Prominent position as a leading EPC contractor in India with a legacy of successful large-scale infrastructure projects.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h4>✓ Financial Stability</h4>
+                        <p>Stable operating cash flows and prudent financial management with adequate liquidity position supporting debt servicing.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h4>✓ Project Execution</h4>
+                        <p>Excellent track record in timely and within-budget completion of complex infrastructure projects across multiple sectors.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h4>✓ Industry Relationships</h4>
+                        <p>Strong relationships with major utilities, government agencies, and private sector clients resulting in steady order inflows.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="color: var(--primary); font-weight: 700; margin-bottom: 1.5rem; border-bottom: 2px solid #f59e0b; padding-bottom: 0.75rem;">Areas of Concern</h3>
+                    <div class="weakness-item">
+                        <h4>⚠ Sector Dependency</h4>
+                        <p>High exposure to infrastructure and utility sector which is cyclical and sensitive to policy changes and government budgets.</p>
+                    </div>
+                    <div class="weakness-item">
+                        <h4>⚠ Execution Risks</h4>
+                        <p>Projects involve execution risks including cost overruns, delays, and supply chain disruptions in volatile operating environment.</p>
+                    </div>
+                    <div class="weakness-item">
+                        <h4>⚠ Working Capital Intensity</h4>
+                        <p>Business requires significant working capital management given extended project cycles and payment terms with clients.</p>
+                    </div>
+                    <div class="weakness-item">
+                        <h4>⚠ Leverage Profile</h4>
+                        <p>Debt levels remain relatively high; continued monitoring of leverage ratios necessary for sustained credit quality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rating Action Details -->
+        <section class="section">
+            <h2 class="section-title">Rating Action</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Instrument Type</th>
+                            <th>Facility Name</th>
+                            <th>Amount (INR Crore)</th>
+                            <th>Rating / Outlook</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-semibold">Term Loan</td>
+                            <td>Working Capital Term Loan</td>
+                            <td class="text-right">150.00</td>
+                            <td class="text-center">ACER AA / Stable</td>
+                            <td class="text-center">Assigned</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Cash Credit</td>
+                            <td>Working Capital CC</td>
+                            <td class="text-right">300.00</td>
+                            <td class="text-center">ACER AA / Stable</td>
+                            <td class="text-center">Assigned</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">NCD (Non-Convertible Debentures)</td>
+                            <td>NCD Issue I</td>
+                            <td class="text-right">250.00</td>
+                            <td class="text-center">ACER AA / Stable</td>
+                            <td class="text-center">Assigned</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">NCD (Non-Convertible Debentures)</td>
+                            <td>NCD Issue II</td>
+                            <td class="text-right">250.00</td>
+                            <td class="text-center">ACER AA / Stable</td>
+                            <td class="text-center">Assigned</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- NCD Details -->
+        <section class="section">
+            <h2 class="section-title">Non-Convertible Debentures Details</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Issue Name</th>
+                            <th>ISIN</th>
+                            <th>Issue Date</th>
+                            <th>Coupon Rate</th>
+                            <th>Maturity Date</th>
+                            <th>Amount (INR Cr)</th>
+                            <th>Listing Status</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-medium">NCD Issue I</td>
+                            <td class="text-center">INE234A07111</td>
+                            <td class="text-center">15-Jun-2025</td>
+                            <td class="text-center">8.50%</td>
+                            <td class="text-center">15-Jun-2030</td>
+                            <td class="text-right">250.00</td>
+                            <td class="text-center">Listed</td>
+                            <td class="text-center font-semibold">ACER AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td class="font-medium">NCD Issue II</td>
+                            <td class="text-center">INE234A07129</td>
+                            <td class="text-center">20-Oct-2025</td>
+                            <td class="text-center">8.75%</td>
+                            <td class="text-center">20-Oct-2032</td>
+                            <td class="text-right">250.00</td>
+                            <td class="text-center">Listed</td>
+                            <td class="text-center font-semibold">ACER AA/Stable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Financial Indicators -->
+        <section class="section">
+            <h2 class="section-title">Key Financial Indicators</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>FY 2024-25 (Est.)</th>
+                            <th>FY 2023-24</th>
+                            <th>FY 2022-23</th>
+                            <th>Trend</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-semibold">Revenue (INR Crore)</td>
+                            <td class="text-right">2,850</td>
+                            <td class="text-right">2,650</td>
+                            <td class="text-right">2,400</td>
+                            <td class="text-center">↑ Positive</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">EBITDA (INR Crore)</td>
+                            <td class="text-right">385</td>
+                            <td class="text-right">350</td>
+                            <td class="text-right">310</td>
+                            <td class="text-center">↑ Positive</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">EBITDA Margin (%)</td>
+                            <td class="text-right">13.5%</td>
+                            <td class="text-right">13.2%</td>
+                            <td class="text-right">12.9%</td>
+                            <td class="text-center">↑ Stable</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Total Debt (INR Crore)</td>
+                            <td class="text-right">950</td>
+                            <td class="text-right">900</td>
+                            <td class="text-right">850</td>
+                            <td class="text-center">→ Moderate</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Net Debt/EBITDA (x)</td>
+                            <td class="text-right">2.2x</td>
+                            <td class="text-right">2.4x</td>
+                            <td class="text-right">2.6x</td>
+                            <td class="text-center">↑ Improving</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Interest Coverage (x)</td>
+                            <td class="text-right">4.8x</td>
+                            <td class="text-right">4.5x</td>
+                            <td class="text-right">4.2x</td>
+                            <td class="text-center">↑ Improving</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">DSCR</td>
+                            <td class="text-right">1.85x</td>
+                            <td class="text-right">1.80x</td>
+                            <td class="text-right">1.75x</td>
+                            <td class="text-center">↑ Stable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Liquidity Assessment -->
+        <section class="section">
+            <h2 class="section-title">Liquidity Assessment</h2>
+            <div class="card card-highlight">
+                <h3 class="subsection-title">Strong Liquidity Position</h3>
+                <p style="margin-bottom: 1rem;">The company maintains adequate liquidity with a combination of operating cash flows and undrawn bank facilities. Cash and equivalents as of FY 2023-24 stood at INR 180 crores, supplemented by undrawn credit lines of approximately INR 300 crores.</p>
+                <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.75rem;"><strong>Operating Cash Flow:</strong> INR 320 Crores (FY 2023-24)</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Free Cash Flow:</strong> INR 150 Crores (after capex)</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Working Capital Management:</strong> Average DPO of 45 days</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Undrawn Facilities:</strong> INR 300 Crores available</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Outlook & Sensitivities -->
+        <section class="section">
+            <h2 class="section-title">Outlook & Sensitivities</h2>
+            
+            <div class="card">
+                <h3 class="subsection-title">Stable Outlook - Rationale</h3>
+                <p style="margin-bottom: 1rem;">The stable outlook is based on the following expectations:</p>
+                <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.75rem;">Sustained revenue growth of 8-10% annually driven by order book utilization</li>
+                    <li style="margin-bottom: 0.75rem;">Maintenance of EBITDA margins in the 13-15% range</li>
+                    <li style="margin-bottom: 0.75rem;">Net Debt/EBITDA to decline towards 2.0x over the next 12-18 months</li>
+                    <li style="margin-bottom: 0.75rem;">Interest Coverage to remain above 4.5x</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 class="subsection-title">Sensitivity Factors</h3>
+                <p style="margin-bottom: 1rem;"><strong>Rating could be upgraded if:</strong></p>
+                <ul style="margin-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;">Net Debt/EBITDA sustains below 1.8x</li>
+                    <li style="margin-bottom: 0.5rem;">EBITDA margins expand to 15%+ levels</li>
+                    <li style="margin-bottom: 0.5rem;">Order book visibility extends beyond 3 years</li>
+                </ul>
+
+                <p style="margin-bottom: 1rem;"><strong>Rating could be downgraded if:</strong></p>
+                <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.5rem;">Net Debt/EBITDA exceeds 3.0x on a sustained basis</li>
+                    <li style="margin-bottom: 0.5rem;">EBITDA margins compress below 12%</li>
+                    <li style="margin-bottom: 0.5rem;">Major project delays or significant cost overruns</li>
+                    <li style="margin-bottom: 0.5rem;">Deterioration in liquidity position</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Facility-wise Details -->
+        <section class="section">
+            <h2 class="section-title">Facility-wise Lender Details</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bank Name</th>
+                            <th>Facility Name</th>
+                            <th style="text-align: right;">Amount (INR crore)</th>
+                            <th style="text-align: center;">Rating / Outlook</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-semibold" rowspan="2" style="vertical-align: top; background-color: var(--bg-light);">State Bank of India</td>
+                            <td>Term Loan</td>
+                            <td class="text-right">400.00</td>
+                            <td class="text-center font-medium">ACER AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td>Cash Credit</td>
+                            <td class="text-right">300.00</td>
+                            <td class="text-center font-medium">ACER AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold" rowspan="2" style="vertical-align: top; background-color: var(--bg-light);">HDFC Bank</td>
+                            <td>Term Loan</td>
+                            <td class="text-right">200.00</td>
+                            <td class="text-center font-medium">ACER AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td>Cash Credit</td>
+                            <td class="text-right">250.00</td>
+                            <td class="text-center font-medium">ACER AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold" rowspan="2" style="vertical-align: top; background-color: var(--bg-light);">Axis Bank</td>
+                            <td>Term Loan</td>
+                            <td class="text-right">200.00</td>
+                            <td class="text-center font-medium">ACER AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td>Cash Credit</td>
+                            <td class="text-right">150.00</td>
+                            <td class="text-center font-medium">ACER AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold" rowspan="2" style="vertical-align: top; background-color: var(--bg-light);">ICICI Bank</td>
+                            <td>Term Loan</td>
+                            <td class="text-right">150.00</td>
+                            <td class="text-center font-medium">ACER AA/Stable</td>
+                        </tr>
+                        <tr>
+                            <td>Working Capital Facility</td>
+                            <td class="text-right">100.00</td>
+                            <td class="text-center font-medium">ACER AA/Stable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Covenants -->
+        <section class="section">
+            <h2 class="section-title">Covenant Structure</h2>
+            <div class="card card-highlight">
+                <h3 class="subsection-title">Financial Covenants</h3>
+                <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.75rem;"><strong>Debt Service Coverage Ratio (DSCR):</strong> Minimum 1.20x</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Net Debt to EBITDA:</strong> Maximum 3.5x</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Interest Coverage Ratio:</strong> Minimum 4.0x</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Current Ratio:</strong> Minimum 1.25x</li>
+                </ul>
+
+                <h3 class="subsection-title" style="margin-top: 1.5rem;">Operational Covenants</h3>
+                <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.75rem;">Quarterly financial statements within 45 days of quarter end</li>
+                    <li style="margin-bottom: 0.75rem;">Annual audited accounts within 90 days of financial year end</li>
+                    <li style="margin-bottom: 0.75rem;">Quarterly management accounts and variance analysis</li>
+                    <li style="margin-bottom: 0.75rem;">No additional debt without lender consent (except inter-company loans)</li>
+                    <li style="margin-bottom: 0.75rem;">Maintenance of adequate insurance coverage</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Consolidated Entities -->
+        <section class="section">
+            <h2 class="section-title">Consolidation Structure</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Entity Name</th>
+                            <th style="text-align: center;">Consolidation Method</th>
+                            <th style="text-align: center;">Rationale</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-medium">Artesian Water Projects Limited</td>
+                            <td class="text-center">Full Consolidation</td>
+                            <td class="text-center">100% Wholly Owned Subsidiary</td>
+                        </tr>
+                        <tr>
+                            <td class="font-medium">Tata Projects Infrastructure Limited</td>
+                            <td class="text-center">Full Consolidation</td>
+                            <td class="text-center">Significant control and operational holding (71% stake)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <h2 class="section-title">Analytical & Official Contacts</h2>
+            <div class="contact-section">
+                <div class="contact-card">
+                    <div class="contact-name">Vikram Sharma</div>
+                    <div class="contact-detail"><strong>Designation:</strong> Lead Analyst</div>
+                    <div class="contact-detail"><strong>Phone:</strong> +91-22-12345678</div>
+                    <div class="contact-detail"><strong>Email:</strong> <a href="mailto:vikram.sharma@acerratings.com">vikram.sharma@acerratings.com</a></div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-name">Priya Nair</div>
+                    <div class="contact-detail"><strong>Designation:</strong> Director - Ratings</div>
+                    <div class="contact-detail"><strong>Phone:</strong> +91-22-87654321</div>
+                    <div class="contact-detail"><strong>Email:</strong> <a href="mailto:priya.nair@acerratings.com">priya.nair@acerratings.com</a></div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-name">Rahul Desai</div>
+                    <div class="contact-detail"><strong>Designation:</strong> Chief Rating Officer</div>
+                    <div class="contact-detail"><strong>Phone:</strong> +91-22-99998888</div>
+                    <div class="contact-detail"><strong>Email:</strong> <a href="mailto:rahul.desai@acerratings.com">rahul.desai@acerratings.com</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <section class="section">
+            <div class="disclaimer-section">
+                <h3>Disclaimer</h3>
+                <p>ACER Credit Rating Private Limited (ACER) is engaged in the business of providing credit ratings and other permitted services and does not provide investment advice or recommendations, directly or indirectly, with respect to any securities. Ratings are subject to ongoing surveillance, revision or withdrawal, as and when warranted.</p>
+                
+                <p>Information used in assigning ratings has been obtained from sources believed to be reliable, including the rated entity; however, such information has not been independently audited or verified by ACER. While reasonable care has been exercised to ensure that the information contained herein is true and fair, it is provided "as is". ACER does not make any representation, warranty of any kind, or guarantee the accuracy, adequacy, suitability or completeness of any information or its fitness for a particular purpose.</p>
+                
+                <p>All ratings and related analyses are statements of opinion, and ACER shall not be liable for any losses, direct or indirect, arising from use of this publication or its contents. Users are advised to exercise their own judgment and due diligence before making any decision based on the ratings.</p>
+
+                <h3>About ACER</h3>
+                <p>ACER Credit Rating Private Limited is a SEBI-registered Credit Rating Agency engaged in providing credit ratings and analytical services. Our ratings are based on rigorous analysis of financial, operating, and qualitative factors. For more information and the complete definition of ratings, please visit <strong>www.acerratings.com</strong>.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add any interactive features if needed
+            console.log('Press Release Page Loaded');
+        });
+    </script>
+</body>
+</html>

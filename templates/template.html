@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Professional Credit Rating Press Release - ACER Ratings delivering comprehensive financial insights">
+    <meta name="keywords" content="Credit Rating, ACER, Financial Markets, India, SEBI, RBI">
+    <title>ACER Credit Rating | Press Release</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #1e293b;
+            --accent-color: #2563eb;
+            --text-color: #1f2937;
+            --light-gray: #f9fafb;
+            --border-color: #e5e7eb;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Header Section */
+        .header-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .header-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.95rem;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .header-subtitle {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-color);
+            line-height: 1.5;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            min-width: 140px;
+            height: fit-content;
+        }
+
+        .logo-section img {
+            max-width: 120px;
+            height: auto;
+            display: block;
+        }
+
+        /* Rating Table */
+        .rating-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+
+        th {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+
+        tr:hover {
+            background-color: var(--light-gray);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .rating-badge {
+            background: #dbeafe;
+            color: var(--accent-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .content-section h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .content-section p {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-section li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .content-section li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .subsection {
+            margin-bottom: 1.5rem;
+        }
+
+        .subsection h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Analytics/Key Points */
+        .key-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .point-card {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #f5faff 100%);
+            border-radius: 10px;
+            border: 1px solid #dbeafe;
+        }
+
+        .point-card h4 {
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .point-card p {
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-card {
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-card h5 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .contact-card p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border-color);
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-section {
+                flex-direction: column;
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+                padding-bottom: 1.5rem;
+            }
+
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .logo-section {
+                min-width: 100px;
+                padding: 1rem;
+            }
+
+            .header-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .section-title {
+                font-size: 1.25rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            th, td {
+                padding: 0.75rem 0.5rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <div class="header-content">
+                <h1>Tata Projects Limited</h1>
+                <div class="header-meta">
+                    <div class="meta-item">
+                        <span>📍 Mumbai</span>
+                    </div>
+                    <div class="meta-item">
+                        <span>📅 March 02, 2026</span>
+                    </div>
+                </div>
+                <h2 class="header-subtitle">"ACER AA / Stable" Assigned to Non Convertible Debentures</h2>
+            </div>
+            <div class="logo-section">
+                <img src="./assets/logo.svg" alt="ACER Logo">
+            </div>
+        </div>
+
+        <!-- Main Rating Table -->
+        <div class="rating-section">
+            <h3 class="section-title">Rating Actions</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Instrument / Facility</th>
+                            <th>Amount (INR Crore)</th>
+                            <th>Current Rating</th>
+                            <th>Action</th>
+                            <th>Regulator</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Non Convertible Debentures</td>
+                            <td>₹500 Crore</td>
+                            <td><span class="rating-badge">AA/Stable</span></td>
+                            <td>Assigned</td>
+                            <td>SEBI</td>
+                        </tr>
+                        <tr>
+                            <td>Bank Facilities</td>
+                            <td>₹1,500 Crore</td>
+                            <td><span class="rating-badge">AA/Stable</span></td>
+                            <td>Reaffirmed</td>
+                            <td>RBI</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Brief Summary -->
+        <div class="content-section">
+            <h3>Rating Rationale</h3>
+            <p>The rating assignment reflects TPL's strong parentage (Tata Group) and its established position in the
+                domestic EPC market. TPL continues to maintain a healthy and diversified order book with strong
+                medium-term revenue visibility.</p>
+            <p>The rating also factors in TPL's adequate liquidity profile, supported by stable working capital
+                management and financial flexibility associated with the Tata Group. These strengths are partially
+                offset by the inherently working capital-intensive nature of the EPC business and exposure to project
+                execution risks.</p>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="rating-section">
+            <h3 class="section-title">Key Strengths</h3>
+            <div class="key-points">
+                <div class="point-card">
+                    <h4>Strong Revenue Visibility</h4>
+                    <p>Unexecuted order book of ₹45,000 crores with 3x revenue ratio, diversified across sectors.</p>
+                </div>
+                <div class="point-card">
+                    <h4>Execution Excellence</h4>
+                    <p>Proven track record in complex infrastructure projects with focus on technology-intensive work.</p>
+                </div>
+                <div class="point-card">
+                    <h4>Financial Flexibility</h4>
+                    <p>Adequate liquidity with ₹1,200 crore unencumbered cash and strong group support.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rating Drivers -->
+        <div class="rating-section">
+            <h3 class="section-title">Challenges & Mitigants</h3>
+            <div class="two-column">
+                <div class="content-section">
+                    <h3>Working Capital Intensity</h3>
+                    <p>The EPC business requires substantial working capital due to milestone-based billing and
+                        retention money. TPL manages this through back-to-back arrangements with sub-contractors and
+                        client advances.</p>
+                </div>
+                <div class="content-section">
+                    <h3>Project Execution Risks</h3>
+                    <p>Operations are exposed to typical execution risks and raw material price volatility. Most contracts
+                        are protected by price escalation clauses, with adequate financial flexibility to manage impacts.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Financial Indicators -->
+        <div class="rating-section">
+            <h3 class="section-title">Financial Performance</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>FY2023</th>
+                            <th>FY2024</th>
+                            <th>FY2025 (Proj.)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Operating Revenue</strong></td>
+                            <td>₹10,200 Cr</td>
+                            <td>₹13,500 Cr</td>
+                            <td>₹17,000 Cr</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EBITDA</strong></td>
+                            <td>₹850 Cr</td>
+                            <td>₹1,200 Cr</td>
+                            <td>₹1,650 Cr</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EBITDA Margin</strong></td>
+                            <td>8.33%</td>
+                            <td>8.88%</td>
+                            <td>9.70%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Interest Coverage</strong></td>
+                            <td>2.50x</td>
+                            <td>3.10x</td>
+                            <td>3.50x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Net Leverage</strong></td>
+                            <td>3.80x</td>
+                            <td>3.10x</td>
+                            <td>2.80x</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- About Company -->
+        <div class="content-section">
+            <h3>About Tata Projects Limited</h3>
+            <p>Tata Projects Limited (TPL) is one of the fastest growing infrastructure companies in India, specializing
+                in executing large and complex urban and industrial infrastructure projects.</p>
+            <div class="subsection">
+                <h4>Business Segments:</h4>
+                <ul>
+                    <li><strong>Urban Infrastructure:</strong> Metro rails, airports, smart cities, public spaces</li>
+                    <li><strong>Core Infrastructure:</strong> Power generation, transmission, roads, bridges</li>
+                    <li><strong>Industrial Systems:</strong> Hydrocarbon, chemical, metal plant constructions</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3 class="section-title">Contact Information</h3>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h5>Lead Analyst</h5>
+                    <p><strong>Vikram Sharma</strong></p>
+                    <p>📞 +91-22-12345678</p>
+                    <p>📧 vikram.sharma@acerratings.com</p>
+                </div>
+                <div class="contact-card">
+                    <h5>Ratings Director</h5>
+                    <p><strong>Priya Nair</strong></p>
+                    <p>📞 +91-22-87654321</p>
+                    <p>📧 priya.nair@acerratings.com</p>
+                </div>
+                <div class="contact-card">
+                    <h5>Chief Rating Officer</h5>
+                    <p><strong>Rahul Desai</strong></p>
+                    <p>📞 +91-22-99998888</p>
+                    <p>📧 rahul.desai@acerratings.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Disclaimer:</strong> ACER Credit Rating Private Limited provides credit ratings as statements of
+                opinion. Ratings are subject to ongoing surveillance and may be revised or withdrawn. Information used
+                has been obtained from reliable sources but is provided "as is" without warranty. Users are advised to
+                exercise due diligence before making decisions based on these ratings.</p>
+            <p style="margin-top: 1rem;">For more information, visit <a href="https://www.acerratings.com">www.acerratings.com</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

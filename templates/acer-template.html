@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACER Press Release - Tata Projects Limited</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            background: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        .document {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 60px 50px;
+        }
+
+        /* Header Section */
+        .header {
+            border-bottom: 3px solid #54B69C;
+            padding-bottom: 40px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .logo-section img {
+            height: 40px;
+            width: auto;
+        }
+
+        .company-name {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .date {
+            font-size: 13px;
+            color: #666;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .rating-title {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.5;
+        }
+
+        /* Section Headers */
+        .section-header {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-top: 45px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        /* Tables */
+        .table-wrapper {
+            margin-bottom: 30px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            font-weight: 700;
+            color: #1a1a1a;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            color: #404040;
+        }
+
+        td.center {
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafbfc;
+        }
+
+        tr:hover {
+            background-color: #f5f7fa;
+        }
+
+        /* Text Content */
+        .content-block {
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .content-block p {
+            margin-bottom: 12px;
+            color: #333;
+            font-size: 13.5px;
+        }
+
+        .content-block ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .content-block li {
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 13.5px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        /* Strength & Weakness Sections */
+        .strength-item, .weakness-item {
+            margin-bottom: 22px;
+            padding-left: 20px;
+            border-left: 3px solid #54B69C;
+        }
+
+        .weakness-item {
+            border-left-color: #e8a404;
+        }
+
+        .strength-item .title, .weakness-item .title {
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 13.5px;
+        }
+
+        .strength-item .title::before {
+            content: "✓ ";
+            color: #54B69C;
+            margin-right: 6px;
+        }
+
+        .weakness-item .title::before {
+            content: "⚠ ";
+            color: #e8a404;
+            margin-right: 6px;
+        }
+
+        .strength-item .description, .weakness-item .description {
+            color: #444;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contacts-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .contact-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 3px solid #54B69C;
+        }
+
+        .contact-name {
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+
+        .contact-title {
+            font-size: 12px;
+            color: #54B69C;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-email {
+            font-size: 12px;
+            color: #666;
+            word-break: break-all;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 3px solid #54B69C;
+            font-size: 11px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .document {
+                padding: 40px 30px;
+                box-shadow: none;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .document {
+                padding: 30px 20px;
+            }
+
+            .company-name {
+                font-size: 24px;
+            }
+
+            .section-header {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rating-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-top">
+                <div>
+                    <div class="company-name">Tata Projects Limited</div>
+                    <div class="date">Mumbai, March 02, 2026</div>
+                </div>
+                <div class="logo-section">
+                    <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100" height="100" fill="#54B69C" rx="8"/>
+                        <text x="50" y="70" font-size="48" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial, sans-serif">A</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="rating-title">"ACER AA / Stable" assigned to Non Convertible Debentures of Tata Projects Limited</div>
+        </div>
+
+        <!-- RATING ACTION TABLE -->
+        <div class="section-header">Rating Action</div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Instrument / Facility</th>
+                        <th>Amount (INR Crore)</th>
+                        <th>Current Ratings</th>
+                        <th>Rating Action</th>
+                        <th>Regulator</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rs. 500 Crore Non Convertible Debentures</td>
+                        <td class="center">500.00</td>
+                        <td class="center">ACER AA/Stable</td>
+                        <td class="center">Assigned</td>
+                        <td class="center">SEBI</td>
+                    </tr>
+                    <tr>
+                        <td>Rs. 1500 Crore Bank Facilities</td>
+                        <td class="center">1500.00</td>
+                        <td class="center">ACER AA/Stable</td>
+                        <td class="center">Reaffirmed</td>
+                        <td class="center">RBI</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="note">*Details of Facilities/Instruments are in Annexure 2 | **Facility-wise lender details at Annexure 3 | ^List of facilities corresponding to FSR in Annexure 5</p>
+        <p class="note" style="margin-top: 15px;"><strong>Unsupported Rating:</strong> ACER A+</p>
+
+        <!-- ANALYTICAL APPROACH -->
+        <div class="section-header">Analytical Approach</div>
+        <div class="table-wrapper">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Results Considered</strong></td>
+                        <td>Standalone or Consolidated</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Consolidation Extent</strong></td>
+                        <td>Partial Consolidation / Full Consolidation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Group Company Ratings</strong></td>
+                        <td>ACER ratings for group companies (if consolidation considered)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Group/Parent Support</strong></td>
+                        <td>Bottom-up or Top-down approach if applicable</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Other Considerations</strong></td>
+                        <td>As applicable to the entity</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- BRIEF SUMMARY -->
+        <div class="section-header">Brief Summary</div>
+        <div class="content-block">
+            <p>The rating assignment reflects TPL's strong parentage (Tata Group) and its established position in the domestic EPC market. TPL continues to maintain a healthy and diversified order book. The rating also factors in TPL's adequate liquidity profile, supported by stable working capital management and financial flexibility associated with the Tata Group.</p>
+            <p>These strengths are partially offset by the inherently working capital-intensive nature of the EPC business, exposure to project execution risks, and susceptibility to volatility in raw material prices. The moderate financial risk profile, characterized by moderately high leverage, remains a constraint.</p>
+        </div>
+
+        <!-- STRENGTHS -->
+        <div class="section-header">Key Rating Drivers – Strengths</div>
+        <div class="content-block">
+            <div class="strength-item">
+                <div class="title">Strong Parentage and Tata Group Support</div>
+                <div class="description">TPL benefits from the backing of the Tata Group, one of India's most reputable business conglomerates, providing strategic support and financial flexibility. The group's strong track record and market standing enhance TPL's credibility and access to capital.</div>
+            </div>
+
+            <div class="strength-item">
+                <div class="title">Robust Order Book Providing Revenue Visibility</div>
+                <div class="description">As of December 2025, TPL has an unexecuted order book of around INR 45,000 crores, translating to an order book to revenue ratio of over 3x, providing strong medium-term revenue visibility. The order book is well-diversified across sectors including transportation, urban infrastructure, industrial, and power.</div>
+            </div>
+
+            <div class="strength-item">
+                <div class="title">Established Track Record in Executing Complex Projects</div>
+                <div class="description">TPL has successfully completed several marquee infrastructure projects in India, demonstrating strong execution capabilities. The company's focus on selecting technologically intensive and high-margin projects mitigates competition to an extent.</div>
+            </div>
+
+            <div class="strength-item">
+                <div class="title">Adequate Liquidity Profile</div>
+                <div class="description">TPL maintains an adequate liquidity position supported by stable working capital management, operational cash flow generation, and access to credit facilities from banks and financial institutions.</div>
+            </div>
+        </div>
+
+        <!-- WEAKNESSES -->
+        <div class="section-header">Key Rating Drivers – Weaknesses</div>
+        <div class="content-block">
+            <div class="weakness-item">
+                <div class="title">Moderate Financial Risk Profile</div>
+                <div class="description">Given the significant scaling up of operations, reliance on external debt and non-fund based limits has increased. The capital structure is leveraged with Total Outside Liabilities to Tangible Net Worth (TOL/TNW) estimated to remain moderately high.</div>
+            </div>
+
+            <div class="weakness-item">
+                <div class="title">Working Capital Intensive Operations</div>
+                <div class="description">The EPC business involves substantial working capital requirements due to milestone-based billing, holdbacks, and retention money. However, TPL's working capital cycle is expected to remain managed through back-to-back arrangements with sub-contractors and advances from clients.</div>
+            </div>
+
+            <div class="weakness-item">
+                <div class="title">Project Execution Risks and Raw Material Price Volatility</div>
+                <div class="description">The operations are exposed to typical project execution risks, including delays in land acquisition, regulatory clearances, and funding from clients. While mostly protected by price escalation clauses, some fixed-price contracts remain exposed to raw material price volatility.</div>
+            </div>
+
+            <div class="weakness-item">
+                <div class="title">Cyclical Nature of Infrastructure Sector</div>
+                <div class="description">TPL's business is inherently cyclical and dependent on government spending on infrastructure and private sector capex cycles, which can be subject to economic volatility and policy changes.</div>
+            </div>
+        </div>
+
+        <!-- LIQUIDITY -->
+        <div class="section-header">Liquidity Indicator</div>
+        <div class="content-block">
+            <p><strong>Adequate</strong></p>
+            <p>TPL has adequate liquidity supported by operational cash flows, committed credit facilities, and access to capital markets. The company maintains a reasonable cash balance and has undrawn working capital lines available with its lenders.</p>
+        </div>
+
+        <!-- OUTLOOK & SENSITIVITIES -->
+        <div class="section-header">Outlook & Key Sensitivities</div>
+        <div class="content-block">
+            <p><strong>Outlook: Stable</strong></p>
+            <p>The outlook is stable based on TPL's expected strong revenue growth supported by the robust order book, stable financial leverage ratios, and continued support from the Tata Group. The rating could face downward pressure if there are significant delays in project execution, deterioration in profitability, or a substantial increase in leverage beyond prudent levels.</p>
+        </div>
+
+        <!-- FINANCIAL METRICS TABLE -->
+        <div class="section-header">Key Financial Indicators</div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>FY 2024</th>
+                        <th>FY 2025 (Projected)</th>
+                        <th>FY 2026 (Projected)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Revenue (INR Cr)</strong></td>
+                        <td class="center">12,500</td>
+                        <td class="center">14,200</td>
+                        <td class="center">16,500</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EBITDA Margin (%)</strong></td>
+                        <td class="center">8.5</td>
+                        <td class="center">8.8</td>
+                        <td class="center">9.2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PAT (INR Cr)</strong></td>
+                        <td class="center">450</td>
+                        <td class="center">520</td>
+                        <td class="center">650</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TOL/TNW (x)</strong></td>
+                        <td class="center">1.85</td>
+                        <td class="center">1.72</td>
+                        <td class="center">1.58</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Debt/EBITDA (x)</strong></td>
+                        <td class="center">3.2</td>
+                        <td class="center">2.9</td>
+                        <td class="center">2.6</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interest Coverage (x)</strong></td>
+                        <td class="center">2.8</td>
+                        <td class="center">3.1</td>
+                        <td class="center">3.5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- COMPANY INFORMATION -->
+        <div class="section-header">About Tata Projects Limited</div>
+        <div class="content-block">
+            <p><strong>Sector:</strong> Engineering, Procurement and Construction (EPC)</p>
+            <p><strong>Headquarters:</strong> Mumbai, India</p>
+            <p><strong>Key Focus Areas:</strong> Infrastructure, Power, Transportation, Industrial Projects</p>
+            <p><strong>Parent Company:</strong> Tata Group (one of India's largest conglomerates)</p>
+            <p>Tata Projects Limited is a leading EPC contractor with over five decades of experience in executing complex infrastructure and industrial projects across India and internationally. The company has successfully delivered landmark projects in sectors such as thermal and hydro power, transportation infrastructure, urban development, and industrial facilities.</p>
+        </div>
+
+        <!-- RATING HISTORY -->
+        <div class="section-header">Rating History</div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Instrument</th>
+                        <th>Current Rating</th>
+                        <th>Previous Rating</th>
+                        <th>Date of Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Non Convertible Debentures</td>
+                        <td class="center">ACER AA/Stable</td>
+                        <td class="center">ACER AA/Positive</td>
+                        <td class="center">March 02, 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Bank Facilities</td>
+                        <td class="center">ACER AA/Stable</td>
+                        <td class="center">ACER AA/Stable</td>
+                        <td class="center">March 02, 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ANALYTICAL CONTACTS -->
+        <div class="contacts-section">
+            <div class="section-header">Analytical Contacts</div>
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <div class="contact-name">Ramesh Sharma</div>
+                    <div class="contact-title">Senior Analyst</div>
+                    <div class="contact-email">ramesh.sharma@acerratings.com</div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-name">Priya Gupta</div>
+                    <div class="contact-title">Director</div>
+                    <div class="contact-email">priya.gupta@acerratings.com</div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-name">Vikram Singh</div>
+                    <div class="contact-title">Chief Rating Officer</div>
+                    <div class="contact-email">vikram.singh@acerratings.com</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DISCLAIMER -->
+        <div class="disclaimer">
+            <p><strong>DISCLAIMER:</strong> ACER Ratings is an independent credit rating agency registered with SEBI. This rating represents ACER's independent assessment of the creditworthiness of the rated entity. This rating is based on information available to ACER at the time of rating and is subject to change without notice. ACER has used standard methodologies and procedures in arriving at this rating. The rating is intended for investors, lenders, and other stakeholders to aid their investment and credit decisions. ACER shall not be liable for any losses or damages arising out of the use of this rating. For further details regarding ACER's rating methodologies and policy, please visit www.acerratings.com</p>
+        </div>
+    </div>
+</body>
+</html>
